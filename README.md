@@ -51,7 +51,7 @@ npm run dev
 This will start the server in development mode with hot-reload enabled.
 
 ### Production Mode
-1. Build the TypeScript files:
+1. Build the TypeScript files (IMPORTANT: Must be done before starting the server):
 ```bash
 npm run build
 ```
@@ -61,10 +61,12 @@ npm run build
 npm start
 ```
 
+Note: If you see the error "Cannot find module 'dist/server.js'", it means you haven't built the project yet. Make sure to run `npm run build` before `npm start`.
+
 ## Available Scripts
 
 - `npm run dev` - Start development server
-- `npm run build` - Build TypeScript files
+- `npm run build` - Build TypeScript files (required before production start)
 - `npm start` - Start production server
 - `npm run migrate:make` - Create new migration
 - `npm run migrate:latest` - Run latest migrations
