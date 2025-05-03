@@ -2,10 +2,10 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import swaggerUi from 'swagger-ui-express';
-import { swaggerSpec } from './config/swagger.config.js';
-import authRoutes from './routes/auth.routes.js';
-import emailRoutes from './routes/email.routes.js';
-import healthRoutes from './routes/health.routes.js';
+import { swaggerSpec } from './config/swagger.config';
+import authRoutes from './routes/auth.routes';
+import emailRoutes from './routes/email.routes';
+import healthRoutes from './routes/health.routes';
 
 dotenv.config();
 

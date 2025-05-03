@@ -52,6 +52,15 @@ export class UserModel {
     return result.rows.length ? this.mapRowToUser(result.rows[0]) : null;
   }
 
+  async updateVerificationToken(userId: string, verificationToken: string): Promise<void> {
+    const query = `
+      UPDATE users 
+      SET verification_token = $1, updated_at = CURRENT_TIMESTAMP
+      WHERE id = $2
+    `;
+    await this.pool.query(query, [verificationToken, userId]);
+  }
+
   private mapRowToUser(row: any): IUser {
     return {
       id: row.id,

@@ -1,9 +1,9 @@
 import express from 'express';
-import { EmailService } from '../services/email.service.js';
-import { TokenService } from '../services/token.service.js';
+import { EmailService } from '../services/email.service';
+import { TokenService } from '../services/token.service';
 import bcrypt from 'bcryptjs';
-import { pool } from '../config/database.config.js';
-import { EmailController } from '../controllers/email.controller.js';
+import { pool } from '../config/database.config';
+import { EmailController } from '../controllers/email.controller';
 
 const router = express.Router();
 const emailService = new EmailService();
